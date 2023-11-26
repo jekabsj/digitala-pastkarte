@@ -13,7 +13,10 @@
         <div class="postcard">
             <textarea id="message" placeholder="Ieraksti savu novēlējumu"></textarea>
             <button onclick="generatePostcard()">Ģenerēt pastkarti</button>
-            <img id="postcardImage" alt="Pastkartes attēls">
+            <div class="postcard-image-container">
+                <img id="postcardImage" alt="Pastkartes attēls">
+                <div class="postcard-text" id="postcardText"></div>
+            </div>
             <a id="downloadLink" download="pastkarte.png" style="display: none;">Lejupielādēt pastkarti</a>
         </div>
     </div>
