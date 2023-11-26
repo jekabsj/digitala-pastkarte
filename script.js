@@ -7,6 +7,14 @@ function generatePostcard() {
     }
 
     var postcardImage = document.getElementById('postcardImage');
-    postcardImage.src = 'https://via.placeholder.com/600x400.png?text=' + encodeURIComponent(message);
+    var downloadLink = document.getElementById('downloadLink');
+
+    // Izveido attēlu ar dinamisko tekstu
+    var imageUrl = 'https://via.placeholder.com/600x400.png?text=Skola,+kur%C4%81+katrs+' + encodeURIComponent(message) + '+ir+v%C4%93rt%C4%ABba';
+    postcardImage.src = imageUrl;
     postcardImage.style.display = 'block';
+
+    // Parāda lejupielādes saiti
+    downloadLink.href = imageUrl;
+    downloadLink.style.display = 'block';
 }
